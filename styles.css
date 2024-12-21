@@ -1,0 +1,148 @@
+/* General Reset and Theme */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header and Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #00bfff;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: 0 0 15px #00bfff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff;
+}
+
+/* Email Button */
+.email-btn {
+    padding: 8px 15px;
+    border: 1px solid #00bfff;
+    border-radius: 5px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.email-btn:hover {
+    background: #00bfff;
+    box-shadow: 0 0 20px #00bfff;
+}
+
+/* Main Content */
+.content {
+    padding: 100px 5%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Animation Section */
+.scroll-animation {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.scroll-animation h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+.cursor-trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #00bfff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
